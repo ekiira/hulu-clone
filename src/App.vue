@@ -11,17 +11,24 @@
 <style>
 @import "./assets/base.css";
 
-main {
+.logo {
+  display: block;
+  margin: auto;
+}
+
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: auto;
+  height: 100vh;
+  background-image: linear-gradient(
+    135deg,
+    #231437 0%,
+    #2c385e 50%,
+    #336e6b 100%
+  );
 }
 
 a,
