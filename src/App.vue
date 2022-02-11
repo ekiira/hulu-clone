@@ -1,53 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Hero from "./components/Hero.vue";
+</script>
 
 <template>
   <main>
-    <div class="wrapper">
-      <img alt="Vue logo" class="logo" src="./assets/hulu-logo.svg" />
-    </div>
+    <Hero />
   </main>
 </template>
 
 <style>
 @import "./assets/base.css";
 
-.logo {
-  display: block;
-  margin: auto;
+@font-face {
+  font-family: "Graphik";
+  src: local("Graphik"), url(./fonts/GraphikRegular.otf) format("opentype");
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  height: 100vh;
-  background-image: linear-gradient(
-    135deg,
-    #231437 0%,
-    #2c385e 50%,
-    #336e6b 100%
-  );
+@font-face {
+  font-family: "Graphik Bold";
+  src: local("Graphik"), url(./fonts/GraphikSemibold.otf) format("opentype");
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (max-width: 1023px) {
-  .logo {
-    width: 300px;
-    height: 300px;
-  }
+main {
+  font-family: "Graphik";
 }
 </style>
