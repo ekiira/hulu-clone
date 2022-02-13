@@ -3,6 +3,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    fontSize: {
+      ...defaultTheme.fontSize,
+      x: "10px",
+    },
     extend: {
       colors: {
         ...defaultTheme.colors,
@@ -15,6 +19,7 @@ module.exports = {
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       head: ["Graphik Bold"],
+      semi: ["Graphik SemiBold"],
       arial: ["Arial"],
     },
   },

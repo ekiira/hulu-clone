@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="hero__wrapper">
+  <div class="hero__wrapper py-32">
     <div class="lg:w-2/4 mx-auto text-center">
       <div class="text-xs head">
         Bundle with any hulu plan and save
@@ -15,7 +15,7 @@
         />
       </div>
       <div>
-        <p class="font-head text-white text-xl mt-4">
+        <p class="font-semi text-white text-xl mt-4">
           Get endless entertainment, live sports, and the shows and movies you
           love.
         </p>
@@ -45,7 +45,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  max-height: 100vh;
   background: url("../assets/hulu-bg.jpeg"),
     linear-gradient(135deg, #231437 0%, #2c385e 50%, #336e6b 100%);
   background-size: cover;

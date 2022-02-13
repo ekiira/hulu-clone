@@ -8,8 +8,13 @@
 }
 
 @font-face {
-  font-family: "Graphik Bold";
+  font-family: "Graphik SemiBold";
   src: local("Graphik"), url(./fonts/GraphikSemibold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Graphik Bold";
+  src: local("Graphik"), url(./fonts/GraphikBold.otf) format("opentype");
 }
 
 body {
@@ -19,6 +24,6 @@ body {
 
 @layer components {
   .head {
-    @apply text-green mb-5 uppercase font-bold font-head;
+    @apply text-green mb-5 uppercase font-bold font-semi;
   }
 }
