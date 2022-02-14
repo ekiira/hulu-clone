@@ -6,7 +6,7 @@
       <div class="head text-center">Included in all plans</div>
       <div>
         <h2
-          class="text-white text-center text-6xl font-head font-black capitalize mb-7"
+          class="big_title"
         >
           All the TV you love
         </h2>
