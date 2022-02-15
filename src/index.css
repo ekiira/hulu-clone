@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: "Graphik Medium";
+  src: local("Graphik"), url(./fonts/GraphikMedium.otf) format("opentype");
+}
+
+@font-face {
   font-family: "Graphik SemiBold";
   src: local("Graphik"), url(./fonts/GraphikSemibold.otf) format("opentype");
 }
@@ -26,13 +31,18 @@ body {
   font-family: "Graphik";
 }
 
-
 @layer components {
   .head {
     @apply text-green mb-6 uppercase font-bold font-semi;
   }
 
   .big_title {
-    @apply text-white text-center text-6xl font-head font-black capitalize mb-7
+    @apply text-white text-center text-6xl font-head font-black capitalize mb-7;
+  }
+  .footer__headlinks {
+    @apply text-gray-4 uppercase text-xs font-mid pb-2;
+  }
+  .footer__links {
+    @apply text-gray-2 capitalize text-sm cursor-pointer hover:text-blue-1;
   }
 }
