@@ -33,15 +33,33 @@ body {
 
 @layer components {
   .head {
-    @apply text-green mb-6 uppercase font-bold font-semi;
+    @apply text-green mb-6 uppercase font-bold font-customSemiBold;
   }
 
   .big_title {
-    @apply text-white text-center text-6xl font-head font-black capitalize mb-7;
+    @apply text-white text-center text-6xl font-customBold font-black capitalize mb-7;
   }
+
+  .payment__green_banner {
+    @apply bg-[#04cd6a] rounded-2xl text-xs text-[#16181d] tracking-wide w-5/6 mx-auto h-8 flex items-center justify-center font-customMedium mb-5;
+  }
+
+  .payment__offer {
+    @apply mb-2 text-[rgb(136,136,136)] font-customMedium tracking-wider;
+  }
+
+  .payment__product {
+    @apply text-xl font-customSemiBold mb-3;
+  }
+
+  .button {
+    @apply bg-[#0b0c0f] uppercase text-white h-12 px-3 w-full rounded font-customMedium tracking-wide;
+  }
+
   .footer__headlinks {
-    @apply text-gray-4 uppercase text-xs font-mid pb-2;
+    @apply text-gray-4 uppercase text-xs font-customMedium pb-2;
   }
+
   .footer__links {
     @apply text-gray-2 capitalize text-sm cursor-pointer hover:text-blue-1;
   }

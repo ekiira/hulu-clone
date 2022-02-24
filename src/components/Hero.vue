@@ -15,7 +15,7 @@
         />
       </div>
       <div>
-        <p class="font-semi text-white text-xl mt-4">
+        <p class="customSemibold text-white text-xl mt-4">
           Get endless entertainment, live sports, and the shows and movies you
           love.
         </p>
@@ -29,7 +29,7 @@
       </div>
       <div>
         <div class="text-white opacity-60 text-xs">
-          <span class="font-semibold underline"> What's included?</span>
+          <span class="customSemibold underline"> What's included?</span>
           <span> See <span class="underline"> Bundle Terms</span> </span>
         </div>
         <div class="mt-4 text-white underline">Sign up for hulu only</div>

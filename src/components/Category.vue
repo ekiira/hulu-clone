@@ -27,7 +27,7 @@
         </div>
         <div class="text-white category__image_details">
           <h3>Past &amp; Current Seasons</h3>
-          <h4 class="text-2xl font-semi font-black">TV Shows</h4>
+          <h4 class="text-2xl customSemiBold font-black">TV Shows</h4>
         </div>
       </div>
       <div class="relative">
@@ -37,7 +37,7 @@
         </div>
         <div class="text-white category__image_details">
           <h3>New &amp; Classic</h3>
-          <h4 class="text-2xl font-semi font-black">Movies</h4>
+          <h4 class="text-2xl customSemiBold font-black">Movies</h4>
         </div>
       </div>
       <div class="relative">
@@ -47,7 +47,7 @@
         </div>
         <div class="text-white category__image_details">
           <h3>Groundbreaking</h3>
-          <h4 class="text-2xl font-semi font-black">Hulu Originals</h4>
+          <h4 class="text-2xl customSemiBold font-black">Hulu Originals</h4>
         </div>
       </div>
       <div class="relative">
@@ -57,7 +57,7 @@
         </div>
         <div class="text-white category__image_details">
           <h3>Add-on</h3>
-          <h4 class="text-2xl font-semi font-black">Premiums</h4>
+          <h4 class="text-2xl customSemiBold font-black">Premiums</h4>
         </div>
       </div>
     </div>

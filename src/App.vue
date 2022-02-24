@@ -2,6 +2,7 @@
 import Hero from "./components/Hero.vue";
 import Category from "./components/Category.vue";
 import Billboard from "./components/Billboard.vue";
+import PaymentPlan from "./components/PaymentPlan.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
@@ -10,6 +11,7 @@ import Footer from "./components/Footer.vue";
     <Hero />
     <Category />
     <Billboard />
+    <PaymentPlan />
     <Footer />
   </main>
 </template>
