@@ -45,7 +45,7 @@ body {
   }
 
   .payment__offer {
-    @apply mb-2 text-[rgb(136,136,136)] font-customMedium tracking-wider;
+    @apply mb-2 text-[rgb(136,136,136)] font-customMedium tracking-wider text-sm;
   }
 
   .payment__product {

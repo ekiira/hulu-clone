@@ -1,5 +1,6 @@
 <script setup lang="ts">
-// import data from '../utils/constant'
+import data from "../utils/constant";
+import Tick from "./icons/Tick.vue";
 </script>
 
 <template>
@@ -16,10 +17,10 @@
         </div>
       </div>
 
-      <div class="border-t border-[#EDEFF2]">
+      <div>
         <!-- Header -->
-        <div class="grid grid-cols-5 gap-4 py-8">
-          <div class="col-span-2 text-gray-5">
+        <div class="grid grid-cols-5 gap-4 border-y border-[#EDEFF2]">
+          <div class="col-span-2 text-gray-5 py-8">
             <div>
               <img src="../assets/partners-dark.svg" width="166" />
             </div>
@@ -51,7 +52,7 @@
             </div>
           </div>
 
-          <div class="text-center">
+          <div class="text-center py-8 px-2">
             <div class="payment__green_banner">MOST POPULAR</div>
             <div class="payment__offer">30 DAY FREE TRIAL</div>
             <div class="payment__product">Hulu</div>
@@ -60,7 +61,7 @@
             </div>
           </div>
 
-          <div class="text-center">
+          <div class="text-center bg-[#F7F8FA] py-8 px-2">
             <div class="payment__green_banner bg-transparent"></div>
             <div class="payment__offer">30 DAY FREE TRIAL</div>
             <div class="payment__product">Hulu (No Ads)</div>
@@ -69,7 +70,7 @@
             </div>
           </div>
 
-          <div class="text-center">
+          <div class="text-center py-8 px-2">
             <div class="payment__green_banner bg-transparent"></div>
             <div class="payment__offer">30 DAY FREE TRIAL</div>
             <div class="payment__product">Hulu + Live Tv</div>
@@ -80,15 +81,19 @@
         </div>
 
         <!-- Content -->
-
-        <!-- <div class="grid grid-cols-5 gap-4 py-8">
-          <div class="col-span-2">
-            <span>
-              Streaming Library with thousands of TV episodes and
-              moviesStreaming Library with thousands of TV episodes and movies
+        <div
+          v-for="(el, index) in data"
+          :key="index"
+          class="grid grid-cols-5 gap-4 text-gray-4 border-b border-[#EDEFF2] last:border-[#DCDFE6] items-center"
+        >
+          <div class="col-span-2 py-5 px-2">
+            <span class="tracking-wide">
+              {{ el.text }}
             </span>
-            <span class="ml-3">
+
+            <span class="ml-2" v-if="el.hasInfo">
               <svg
+                class="inline-flex"
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
                 height="14"
@@ -104,7 +109,39 @@
               </svg>
             </span>
           </div>
-        </div> -->
+
+          <div class="flex items-center justify-center py-5 px-2">
+            <div v-if="el.firstColumn">
+              <Tick />
+            </div>
+            <div v-else>
+              <span class="text-[#B8BECC]"> — </span>
+            </div>
+          </div>
+          <div class="flex items-center justify-center bg-[#F7F8FA] py-8 px-2">
+            <div v-if="el.secondColumn">
+              <Tick />
+            </div>
+            <div v-else>
+              <span class="text-[#B8BECC]"> — </span>
+            </div>
+          </div>
+          <div class="flex items-center justify-center py-5 px-2">
+            <div v-if="el.thirdColumn">
+              <Tick />
+            </div>
+            <div v-else>
+              <span class="text-[#B8BECC]"> — </span>
+            </div>
+          </div>
+        </div>
+        <div class="text-x text-gray-5 mt-3">
+          <p>^For current-season shows in the streaming library only</p>
+          <p>
+            ^^Switches from Live TV to Hulu take effect as of the next billing
+            cycle
+          </p>
+        </div>
       </div>
     </div>
   </div>
