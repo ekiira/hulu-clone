@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="billboard__wrappe bg-gray py-28">
+  <div class="billboard__wrapper bg-gray py-28">
     <div class="w-3/5 mx-auto">
       <div class="head text-center text-sm">
         HULU + LIVE TV, NOW WITH DISNEY+ AND ESPN+

@@ -56,6 +56,10 @@ body {
     @apply bg-[#0b0c0f] uppercase text-white h-12 px-3 w-full rounded font-customMedium tracking-wide;
   }
 
+  .centered {
+    @apply flex items-center justify-center
+  }
+
   .footer__headlinks {
     @apply text-gray-4 uppercase text-xs font-customMedium pb-2;
   }
