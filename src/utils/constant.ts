@@ -1,4 +1,4 @@
-export default [
+export const data = [
   {
     text: "Streaming Library with thousands of TV episodes and movies",
     firstColumn: true,
@@ -87,6 +87,67 @@ export default [
   },
   {
     text: "Live sports with ESPN+, now on Hulu",
+    firstColumn: false,
+    secondColumn: false,
+    thirdColumn: true,
+    hasInfo: true,
+  },
+];
+
+export const addOns = [
+  {
+    text: "HBO Max™",
+    firstColumn: true,
+    secondColumn: true,
+    thirdColumn: true,
+    hasInfo: false,
+  },
+
+  {
+    text: "CINEMAX®",
+    firstColumn: true,
+    secondColumn: true,
+    thirdColumn: true,
+    hasInfo: false,
+  },
+
+  {
+    text: "SHOWTIME®",
+    firstColumn: true,
+    secondColumn: true,
+    thirdColumn: true,
+    hasInfo: false,
+  },
+  {
+    text: "STARZ®",
+    firstColumn: true,
+    secondColumn: true,
+    thirdColumn: true,
+    hasInfo: false,
+  },
+  {
+    text: "Unlimited Screens",
+    firstColumn: false,
+    secondColumn: false,
+    thirdColumn: true,
+    hasInfo: true,
+  },
+  {
+    text: "Enhanced Cloud DVR",
+    firstColumn: false,
+    secondColumn: false,
+    thirdColumn: true,
+    hasInfo: false,
+  },
+  {
+    text: "Entertainment Add-on",
+    firstColumn: false,
+    secondColumn: false,
+    thirdColumn: true,
+    hasInfo: true,
+  },
+  {
+    text: "Espanol Add-on",
     firstColumn: false,
     secondColumn: false,
     thirdColumn: true,

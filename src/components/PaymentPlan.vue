@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import data from "../utils/constant";
+import { data, addOns } from "../utils/constant";
 import Tick from "./icons/Tick.vue";
+import Info from "./icons/Info.vue";
 </script>
 
 <template>
@@ -86,7 +87,7 @@ import Tick from "./icons/Tick.vue";
         <div
           v-for="(el, index) in data"
           :key="index"
-          class="grid grid-cols-5 gap-4 text-gray-4 border-b border-[#EDEFF2] last:border-[#DCDFE6] items-center"
+          class="grid grid-cols-5 gap-4 text-gray-5 border-b border-gray-6 last:border-gray-7 items-center"
         >
           <div class="col-span-2 py-5 px-2">
             <span class="tracking-wide">
@@ -94,21 +95,7 @@ import Tick from "./icons/Tick.vue";
             </span>
 
             <span class="ml-2" v-if="el.hasInfo">
-              <svg
-                class="inline-flex"
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                fill="none"
-                fill-rule="evenodd"
-                opacity=".4"
-              >
-                <g stroke="#292c33">
-                  <circle stroke-width="1.5" cx="7" cy="7" r="6" />
-                  <path d="M6.75 6.75h1V9.5h-1z" fill="#292c33" />
-                </g>
-                <circle fill="#292c33" cx="7" cy="4.75" r="1" />
-              </svg>
+              <Info />
             </span>
           </div>
 
@@ -120,7 +107,7 @@ import Tick from "./icons/Tick.vue";
               <span class="text-[#B8BECC]"> — </span>
             </div>
           </div>
-          <div class="centered h-full bg-[#F7F8FA] py-8 px-2">
+          <div class="centered h-full bg-[#F7F8FA] py-5 px-2">
             <div v-if="el.secondColumn">
               <Tick />
             </div>
@@ -145,7 +132,79 @@ import Tick from "./icons/Tick.vue";
           </p>
         </div>
 
-        <div class="mt-14 border-y border-[#DCDFE6] py-5 centered text-gray-5">
+        <!-- Add-ons -->
+        <div class="text-gray-5 pt-20">
+          <div class="border-gray-6 border-b pb-5">
+            <span class="mr-3 text-[32px] tracking-wide font-customSemiBold"
+              >Available Add-ons</span
+            >
+            <div class="w-3/4 mt-1">
+              <p class="font-customLight text-sm pt-3">
+                Add-ons available at an additional cost.<br />Add them up after
+                you sign up for Hulu.
+              </p>
+            </div>
+          </div>
+
+          <div
+            v-for="(el, index) in addOns"
+            :key="index"
+            class="grid grid-cols-5 gap-4 border-b border-gray-6 last:border-none items-center"
+          >
+            <div class="col-span-2 py-5 px-2">
+              <span class="tracking-wide">
+                {{ el.text }}
+              </span>
+
+              <span class="ml-2" v-if="el.hasInfo">
+                <svg
+                  class="inline-flex"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  fill-rule="evenodd"
+                  opacity=".4"
+                >
+                  <g stroke="#292c33">
+                    <circle stroke-width="1.5" cx="7" cy="7" r="6" />
+                    <path d="M6.75 6.75h1V9.5h-1z" fill="#292c33" />
+                  </g>
+                  <circle fill="#292c33" cx="7" cy="4.75" r="1" />
+                </svg>
+              </span>
+            </div>
+            <div class="centered py-5 px-2">
+              <div v-if="el.firstColumn">
+                <Tick />
+              </div>
+              <div v-else>
+                <span class="text-[#B8BECC]"> — </span>
+              </div>
+            </div>
+            <div class="centered h-full bg-[#F7F8FA] py-5 px-2">
+              <div v-if="el.secondColumn">
+                <Tick />
+              </div>
+              <div v-else>
+                <span class="text-[#B8BECC]"> — </span>
+              </div>
+            </div>
+            <div class="centered py-5 px-2">
+              <div v-if="el.thirdColumn">
+                <Tick />
+              </div>
+              <div v-else>
+                <span class="text-[#B8BECC]"> — </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-y border-gray-7 py-5 centered text-gray-5"
+          role="button"
+        >
           <span class="flex"
             >Show Add-ons
             <span class="centered ml-2">
