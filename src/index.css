@@ -40,18 +40,6 @@ body {
     @apply text-white text-center text-6xl font-customBold font-black capitalize mb-7;
   }
 
-  .payment__green_banner {
-    @apply bg-[#04cd6a] rounded-2xl text-xs text-[#16181d] tracking-wide w-5/6 mx-auto h-8 flex items-center justify-center font-customMedium mb-5;
-  }
-
-  .payment__offer {
-    @apply mb-2 text-[rgb(136,136,136)] font-customMedium tracking-wider text-sm;
-  }
-
-  .payment__product {
-    @apply text-xl font-customSemiBold mb-3;
-  }
-
   .button {
     @apply bg-[#0b0c0f] uppercase text-white h-12 px-3 w-full rounded font-customMedium tracking-wide;
   }

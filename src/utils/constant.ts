@@ -1,6 +1,8 @@
-export const data = [
+import type { IPaymentData } from "@/types/paymentPlan";
+
+export const paymentData: Array<IPaymentData> = [
   {
-    text: "Streaming Library with thousands of TV episodes and movies",
+    text: "Hulu Streaming Library with thousands of TV episodes and movies",
     firstColumn: true,
     secondColumn: true,
     thirdColumn: true,
@@ -94,7 +96,7 @@ export const data = [
   },
 ];
 
-export const addOns = [
+export const addOns: Array<IPaymentData> = [
   {
     text: "HBO Max™",
     firstColumn: true,

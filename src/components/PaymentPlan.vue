@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import { data, addOns } from "../utils/constant";
+import { ref } from "vue";
+import { Switch } from "@headlessui/vue";
+
+import { paymentData as data, addOns } from "../utils/constant";
 import Tick from "./icons/Tick.vue";
 import Info from "./icons/Info.vue";
+
+// state
+const enabledSave = ref(false);
+const showAddons = ref(false);
 </script>
 
 <template>
@@ -22,7 +29,8 @@ import Info from "./icons/Info.vue";
         <!-- Header -->
         <div class="sticky top-0 bg-white z-10">
           <div class="grid grid-cols-5 gap-4 border-y border-[#EDEFF2]">
-            <div class="col-span-2 text-gray-5 py-8">
+            <!--  -->
+            <div class="col-span-2 text-gray-5 pt-8 pb-3">
               <div>
                 <img src="../assets/partners-dark.svg" width="166" />
               </div>
@@ -52,32 +60,55 @@ import Info from "./icons/Info.vue";
                   Includes Hulu (plan of your choice), Disney+, and ESPN+.
                 </p>
               </div>
+              <div class="py-5">
+                <Switch
+                  v-model="enabledSave"
+                  :class="enabledSave ? 'bg-green-1' : 'bg-gray-9'"
+                  class="relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                >
+                  <span class="sr-only">Use setting</span>
+                  <span
+                    aria-hidden="true"
+                    :class="enabledSave ? 'translate-x-9' : 'translate-x-0'"
+                    class="pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
+                  />
+                </Switch>
+              </div>
             </div>
-
-            <div class="text-center py-8 px-2">
+            <!--  -->
+            <div class="text-center pt-8 pb-3 px-2">
               <div class="payment__green_banner">MOST POPULAR</div>
               <div class="payment__offer">30 DAY FREE TRIAL</div>
               <div class="payment__product">Hulu</div>
               <div>
-                <button class="button">$6.99 / MONTH</button>
+                <button class="button" v-if="enabledSave">
+                  $13.99 / MONTH
+                </button>
+                <button class="button" v-else>$6.99 / MONTH</button>
               </div>
             </div>
-
-            <div class="text-center bg-[#F7F8FA] py-8 px-2">
+            <!--  -->
+            <div class="text-center bg-[#F7F8FA] pt-8 pb-3 px-2">
               <div class="payment__green_banner bg-transparent"></div>
               <div class="payment__offer">30 DAY FREE TRIAL</div>
               <div class="payment__product">Hulu (No Ads)</div>
               <div>
-                <button class="button">$12.99 / MONTH</button>
+                <button class="button" v-if="enabledSave">
+                  $19.99 / MONTH
+                </button>
+                <button class="button" v-else>$12.99 / MONTH</button>
               </div>
             </div>
-
-            <div class="text-center py-8 px-2">
+            <!--  -->
+            <div class="text-center pt-8 pb-3 px-2">
               <div class="payment__green_banner bg-transparent"></div>
               <div class="payment__offer">30 DAY FREE TRIAL</div>
               <div class="payment__product">Hulu + Live Tv</div>
               <div>
-                <button class="button">$69.99 / MONTH</button>
+                <button class="button" v-if="enabledSave">
+                  $75.99 / MONTH
+                </button>
+                <button class="button" v-else>$69.99 / MONTH</button>
               </div>
             </div>
           </div>
@@ -124,16 +155,22 @@ import Info from "./icons/Info.vue";
             </div>
           </div>
         </div>
-        <div class="text-x text-gray-5 mt-3">
+        <div class="text-x text-gray-5 mt-3 pb-10">
           <p>^For current-season shows in the streaming library only</p>
           <p>
             ^^Switches from Live TV to Hulu take effect as of the next billing
             cycle
           </p>
+          <p>
+            *Savings of up to $7.98/month compared to regular price of each
+            service. 18+ only. Access content from each service separately, and
+            access ESPN+ content via Hulu. Offer valid for eligible subscribers
+            only. Subject to Bundle Terms.
+          </p>
         </div>
 
         <!-- Add-ons -->
-        <div class="text-gray-5 pt-20">
+        <div class="text-gray-5 pt-16" v-if="showAddons">
           <div class="border-gray-6 border-b pb-5">
             <span class="mr-3 text-[32px] tracking-wide font-customSemiBold"
               >Available Add-ons</span
@@ -204,9 +241,12 @@ import Info from "./icons/Info.vue";
         <div
           class="border-y border-gray-7 py-5 centered text-gray-5"
           role="button"
+          @click="showAddons = !showAddons"
         >
-          <span class="flex"
-            >Show Add-ons
+          <span class="flex">
+            <span v-if="showAddons"> Hide Add-ons </span>
+            <span v-else> Show Add-ons </span>
+
             <span class="centered ml-2">
               <svg width="26" height="13" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -222,3 +262,17 @@ import Info from "./icons/Info.vue";
     </div>
   </div>
 </template>
+
+<style>
+.payment__green_banner {
+  @apply bg-green-1 rounded-2xl text-xs text-[#16181d] tracking-wide w-5/6 mx-auto h-8 flex items-center justify-center font-customMedium mb-5;
+}
+
+.payment__offer {
+  @apply mb-2 text-gray-9 font-customMedium tracking-wider text-sm;
+}
+
+.payment__product {
+  @apply text-xl font-customSemiBold mb-3;
+}
+</style>
