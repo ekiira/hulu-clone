@@ -81,7 +81,7 @@ function changeTab(index: number) {
                 >
                   <button
                     :class="[
-                      'uppercase text-red font-customMedium text-xs hover:text-gray-8 mb-5 mr-8',
+                      'uppercase text-red font-customMedium text-xs hover:text-[#c8c8c8] mb-5 mr-8',
                       selected ? 'text-white' : 'text-[#ffffff66]',
                     ]"
                   >

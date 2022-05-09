@@ -37,11 +37,11 @@ body {
   }
 
   .big_title {
-    @apply text-white text-center text-6xl font-customBold font-black capitalize mb-7;
+    @apply text-white text-center text-5xl font-customMedium font-black capitalize mb-7;
   }
 
   .button {
-    @apply bg-[#0b0c0f] uppercase text-white h-12 px-3 w-full rounded font-customMedium tracking-wide;
+    @apply bg-white text-sm uppercase text-dark h-12 px-3 w-full rounded font-customSemiBold tracking-wide;
   }
 
   .centered {
@@ -49,7 +49,7 @@ body {
   }
 
   .footer__headlinks {
-    @apply text-gray-4 uppercase text-xs font-customMedium pb-2;
+    @apply text-[#262930] uppercase text-xs font-customMedium pb-2;
   }
 
   .footer__links {
