@@ -172,7 +172,7 @@ import Facebook from "./icons/Facebook.vue";
         </div>
       </div>
     </div>
-    <div class="mt-10 text-center bg-gray w-full text-white tracking-wide">
+    <div class="mt-10 text-center bg-black w-full text-white tracking-wide">
       <p>
         This is just a website clone of
         <a
