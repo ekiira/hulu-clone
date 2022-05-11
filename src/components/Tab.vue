@@ -70,7 +70,7 @@ function changeTab(index: number) {
     <div class="h-full relative z-30 py-10 w-4/5 container mx-auto">
       <div>
         <div class="mt-40">
-          <div class="w-3/5">
+          <div class=" xl:w-3/5">
             <TabGroup :selectedIndex="selectedTab" @change="changeTab">
               <TabList>
                 <Tab

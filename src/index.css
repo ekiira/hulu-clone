@@ -33,11 +33,11 @@ body {
 
 @layer components {
   .head {
-    @apply text-green mb-6 uppercase font-bold font-customSemiBold;
+    @apply text-green mb-6 uppercase text-xs font-customSemiBold;
   }
 
   .big_title {
-    @apply text-white text-center text-5xl font-customMedium font-black capitalize mb-7;
+    @apply text-white text-center md:text-3xl lg:text-5xl font-customMedium font-black capitalize md:mb-2 lg:mb-7;
   }
 
   .button {

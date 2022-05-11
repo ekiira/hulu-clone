@@ -7,10 +7,10 @@ import Facebook from "./icons/Facebook.vue";
 
 <template>
   <div class="bg-gray-1 pt-14">
-    <div class="w-4/5 container mx-auto">
+    <div class="md:w-5/6 lg:w-4/5 container mx-auto">
       <div>
         <div class="grid grid-cols-6 gap-6 border-b-2 border-gray-3 py-10">
-          <div class="col-span-4">
+          <div class="md:col-span-6 lg:col-span-4 leading-3">
             <h3 class="footer__headlinks">Browse</h3>
 
             <div class="grid grid-cols-4 gap-1">
@@ -79,8 +79,8 @@ import Facebook from "./icons/Facebook.vue";
               </div>
             </div>
           </div>
-
-          <div class="pl-5">
+<!--  -->
+          <div class="lg:pl-5 md:col-span-2 lg:col-span-1">
             <h3 class="footer__headlinks">Help</h3>
             <div>
               <div class="py-1">
@@ -97,7 +97,7 @@ import Facebook from "./icons/Facebook.vue";
               </div>
             </div>
           </div>
-          <div class="pl-5">
+          <div class="lg:pl-5 md:col-span-2 lg:col-span-1">
             <h3 class="footer__headlinks">About Us</h3>
             <div>
               <div class="py-1">

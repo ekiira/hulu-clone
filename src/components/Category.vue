@@ -3,20 +3,20 @@
 <template>
   <div class="bg-black h-full border-b m-0 border-b-black">
     <div class="category__wrapper">
-      <div class="w-3/5 container mx-auto pb-16">
+      <div class="md:w-5/6 lg:w-3/5 container mx-auto pb-16">
         <div class="head text-center">Included in all plans</div>
         <div>
           <h2 class="big_title">All the TV you love</h2>
         </div>
         <div>
-          <p class="text-white text-center text-lg">
+          <p class="text-white text-center lg:text-lg">
             Stream full seasons of exclusive series, current-season episodes,
             hit movies, Hulu Originals, kids shows, and more.
           </p>
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="relative">
           <div class="category_image_overlay"></div>
           <div>
@@ -27,8 +27,8 @@
             />
           </div>
           <div class="text-white category__image_details">
-            <h3>Past &amp; Current Seasons</h3>
-            <h4 class="text-2xl customSemiBold font-black">TV Shows</h4>
+            <h3 class="text-xs">Past &amp; Current Seasons</h3>
+            <h4 class="text-xl customSemiBold font-black">TV Shows</h4>
           </div>
         </div>
         <div class="relative">
@@ -41,8 +41,8 @@
             />
           </div>
           <div class="text-white category__image_details">
-            <h3>New &amp; Classic</h3>
-            <h4 class="text-2xl customSemiBold font-black">Movies</h4>
+            <h3 class="text-xs">New &amp; Classic</h3>
+            <h4 class="text-xl customSemiBold font-black">Movies</h4>
           </div>
         </div>
         <div class="relative">
@@ -55,8 +55,8 @@
             />
           </div>
           <div class="text-white category__image_details">
-            <h3>Groundbreaking</h3>
-            <h4 class="text-2xl customSemiBold font-black">Hulu Originals</h4>
+            <h3 class="text-xs">Groundbreaking</h3>
+            <h4 class="text-xl customSemiBold font-black">Hulu Originals</h4>
           </div>
         </div>
         <div class="relative">
@@ -69,8 +69,8 @@
             />
           </div>
           <div class="text-white category__image_details">
-            <h3>Add-on</h3>
-            <h4 class="text-2xl customSemiBold font-black">Premiums</h4>
+            <h3 class="text-xs">Add-on</h3>
+            <h4 class="text-xl customSemiBold font-black">Premiums</h4>
           </div>
         </div>
       </div>

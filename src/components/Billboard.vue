@@ -2,8 +2,8 @@
 
 <template>
   <div class="bg-black h-full m-0 border-t border-t-black">
-    <div class="py-28">
-      <div class="w-3/5 container mx-auto">
+    <div class="md:py-20 lg:py-28">
+      <div class="md:w-5/6 lg:w-3/5 container mx-auto">
         <div class="head text-center text-sm">
           HULU + LIVE TV, NOW WITH DISNEY+ AND ESPN+
         </div>
@@ -11,11 +11,13 @@
           <h2 class="big_title">Live TV Makes It Better</h2>
         </div>
         <div>
-          <p class="mt-1 text-white tracking-wide text-lg text-center">
+          <p class="mt-1 text-white tracking-wide lg:text-lg text-center">
             Make the switch from cable. Get 75+ top channels on Hulu with your
             favorite live sports, news, and events - plus the entire Hulu
-            streaming library. Access endless entertainment with Disney+ and
-            live sports with ESPN+. All three for a new price of $69.99/month.
+            streaming library. With Unlimited DVR, store Live TV recordings for
+            up to nine months and fast-forward through your DVR content. Access
+            endless entertainment with Disney+ and live sports with ESPN+. All
+            three for a new price of $69.99/month.
           </p>
         </div>
         <div class="mt-4 text-x text-white opacity-50 text-center">
