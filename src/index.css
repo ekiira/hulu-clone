@@ -45,14 +45,6 @@ body {
   }
 
   .centered {
-    @apply flex items-center justify-center
-  }
-
-  .footer__headlinks {
-    @apply text-[#262930] uppercase text-xs font-customMedium pb-2;
-  }
-
-  .footer__links {
-    @apply text-gray-2 capitalize text-sm cursor-pointer hover:text-blue-1;
+    @apply flex items-center justify-center;
   }
 }

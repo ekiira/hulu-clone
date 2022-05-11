@@ -7,7 +7,7 @@ import Facebook from "./icons/Facebook.vue";
 
 <template>
   <div class="bg-gray-1 pt-14">
-    <div class="w-4/5 mx-auto">
+    <div class="w-4/5 container mx-auto">
       <div>
         <div class="grid grid-cols-6 gap-6 border-b-2 border-gray-3 py-10">
           <div class="col-span-4">
@@ -186,3 +186,13 @@ import Facebook from "./icons/Facebook.vue";
     </div>
   </div>
 </template>
+
+<style>
+.footer__headlinks {
+  @apply text-[#262930] uppercase text-xs font-customMedium pb-2;
+}
+
+.footer__links {
+  @apply text-gray-2 capitalize text-sm cursor-pointer hover:text-blue-1;
+}
+</style>

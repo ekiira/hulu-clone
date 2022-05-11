@@ -13,7 +13,7 @@ const showAddons = ref(false);
 
 <template>
   <div class="pt-20 pb-10 bg-black">
-    <div class="w-4/5 mx-auto">
+    <div class="w-4/5 container mx-auto">
       <div class="text-center pb-10">
         <h2 class="big_title text-white">Select Your Plan</h2>
         <div class="text-white text-lg">

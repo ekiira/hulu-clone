@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="hero__wrapper py-32">
+  <div class="hero__wrapper pt-32 pb-24">
     <div class="my-20">
       <div class="lg:w-3/5 mx-auto text-center">
         <div class="text-xs head tracking-wide">

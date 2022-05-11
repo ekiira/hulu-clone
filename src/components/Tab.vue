@@ -67,10 +67,10 @@ function changeTab(index: number) {
   <div class="tab-bg" :style="tabsBackground">
     <div class="tab-bg-overlay"></div>
 
-    <div class="h-full relative z-30 py-10">
-      <div class="my-32">
-        <div class="w-4/5 my-20 mx-auto">
-          <div>
+    <div class="h-full relative z-30 py-10 w-4/5 container mx-auto">
+      <div>
+        <div class="mt-40">
+          <div class="w-3/5">
             <TabGroup :selectedIndex="selectedTab" @change="changeTab">
               <TabList>
                 <Tab
@@ -131,10 +131,10 @@ function changeTab(index: number) {
 
 <style>
 .tab-bg {
-  @apply h-screen relative bg-no-repeat bg-cover;
+  @apply h-[900px] max-h-screen relative bg-no-repeat bg-cover;
 }
 .tab-bg-overlay {
-  @apply h-screen absolute w-full;
+  @apply h-[900px] max-h-screen  absolute w-full;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.8) -57.5%,
