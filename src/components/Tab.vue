@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted, watch, watchEffect } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 import type { ITabs, ITabsBackground } from "../types/tabs";
 
@@ -70,7 +70,7 @@ function changeTab(index: number) {
     <div class="h-full relative z-30 py-10 w-4/5 container mx-auto">
       <div>
         <div class="mt-40">
-          <div class=" xl:w-3/5">
+          <div class="xl:w-3/5 text-center lg:text-left">
             <TabGroup :selectedIndex="selectedTab" @change="changeTab">
               <TabList>
                 <Tab
@@ -90,10 +90,12 @@ function changeTab(index: number) {
                 </Tab>
               </TabList>
               <TabPanels v-for="(el, index) in tabs" :key="index">
-                <div class="grid grid-cols-2">
+                <div class="grid lg:grid-cols-2">
                   <TabPanel
                     ><div>
-                      <h3 class="my-8 text-5xl font-customSemiBold text-white">
+                      <h3
+                        class="my-8 text-3xl lg:text-5xl font-customSemiBold text-white"
+                      >
                         {{ el.title }}
                       </h3>
 
@@ -101,7 +103,7 @@ function changeTab(index: number) {
                         {{ el.content.paragraph }}
                       </p>
 
-                      <div class="flex my-5">
+                      <div class="flex my-5 md:justify-center lg:justify-start">
                         <div
                           v-for="(image, index) in el.content.images"
                           :key="index"
@@ -131,10 +133,10 @@ function changeTab(index: number) {
 
 <style>
 .tab-bg {
-  @apply h-[900px] max-h-screen relative bg-no-repeat bg-cover;
+  @apply xl:h-[900px] max-h-screen relative bg-no-repeat bg-cover;
 }
 .tab-bg-overlay {
-  @apply h-[900px] max-h-screen  absolute w-full;
+  @apply xl:h-[900px] max-h-screen  absolute w-full;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.8) -57.5%,

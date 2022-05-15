@@ -8,6 +8,5 @@ export interface ITabs {
 }
 
 export interface ITabsBackground {
-  backgroundImage: string
+  backgroundImage: string;
 }
-
