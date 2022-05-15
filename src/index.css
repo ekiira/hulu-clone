@@ -41,10 +41,14 @@ body {
   }
 
   .button {
-    @apply bg-white text-sm uppercase text-dark h-12 px-3 w-full rounded font-customSemiBold tracking-wide;
+    @apply bg-white text-sm uppercase text-dark h-9 lg:h-12 px-3 w-full rounded font-customSemiBold tracking-wide;
   }
 
   .centered {
     @apply flex items-center justify-center;
+  }
+
+  .dark {
+    @apply bg-black text-white
   }
 }
