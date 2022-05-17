@@ -39,7 +39,7 @@ const showAddons = ref(false);
                 </span>
               </p>
               <div>
-                <img src="../assets/partners-dark.svg" width="166" />
+                <img src="../assets/partners-dark.svg" width="166" alt="partners-logo" />
               </div>
               <div>
                 <p class="font-customLight text-sm pt-2 w-4/5 md:w-full">
@@ -120,7 +120,7 @@ const showAddons = ref(false);
             <!--  -->
             <div class="col-span-2 pt-8">
               <div>
-                <img src="../assets/partners-dark.svg" width="166" />
+                <img src="../assets/partners-dark.svg" width="166" alt="partners-logo" />
               </div>
               <div class="flex items-center mt-2">
                 <span class="mr-3 text-[32px] tracking-wide font-customSemiBold"
