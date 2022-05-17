@@ -9,7 +9,7 @@
           <h2 class="big_title">All the TV you love</h2>
         </div>
         <div>
-          <p class="text-white text-center text-sm lg:text-lg">
+          <p class="text-white text-center text-sm lg:text-base">
             Stream full seasons of exclusive series, current-season episodes,
             hit movies, Hulu Originals, kids shows, and more.
           </p>
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div>
-        <div class="grid grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           <div></div>
           <div></div>
           <div></div>

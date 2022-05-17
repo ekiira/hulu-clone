@@ -10,42 +10,27 @@ const tabs = ref<ITabs[]>([
     content: {
       paragraph:
         "Catch your games at home or on the go. Stream live games from major college and pro leagues including the NCAA®, NBA, NHL, NFL, and more.",
-      images: [
-        "/src/assets/cbs-sports.png",
-        "/src/assets/espn.png",
-        "/src/assets/nbc.png",
-        "/src/assets/golf.png",
-      ],
+      images: ["cbs-sports.png", "espn.png", "nbc.png", "golf.png"],
     },
-    backgroundImage: "url(" + "/src/assets/sports-bg.jpeg" + ")",
+    backgroundImage: "url(" + "./assets/sports-bg.jpeg" + ")",
   },
   {
     title: " Breaking News",
     content: {
       paragraph:
         "  Keep pace with what's going on locally and globally with trusted opinions from all the top news networks.",
-      images: [
-        "/src/assets/abc.png",
-        "/src/assets/cnn.svg",
-        "/src/assets/msn.png",
-        "/src/assets/fox.svg",
-      ],
+      images: ["abc.png", "cnn.svg", "msn.png", "fox.svg"],
     },
-    backgroundImage: "url(" + "/src/assets/news-bg.jpeg" + ")",
+    backgroundImage: "url(" + "./assets/news-bg.jpeg" + ")",
   },
   {
     title: "Biggest Events",
     content: {
       paragraph:
         "Spectacular, can't-miss moments like the Olympics, Grammys®, Oscars®, Emmys®, and more.",
-      images: [
-        "/src/assets/film.png",
-        "/src/assets/golden-globe.png",
-        "/src/assets/grammy.png",
-        "/src/assets/oscars.png",
-      ],
+      images: ["film.png", "golden-globe.png", "grammy.png", "oscars.png"],
     },
-    backgroundImage: "url(" + "/src/assets/events-bg.jpeg" + ")",
+    backgroundImage: "url(" + "./assets/events-bg.jpeg" + ")",
   },
 ]);
 const selectedTab = ref(0);
@@ -109,7 +94,11 @@ function changeTab(index: number) {
                           :key="index"
                           class="mr-5 bg-white rounded-full w-12 h-12 flex items-center"
                         >
-                          <img :src="image" alt="logo" class="w-4/5 mx-auto" />
+                          <img
+                            :src="`./assets/${image}`"
+                            alt="logo"
+                            class="w-4/5 mx-auto"
+                          />
                         </div>
                       </div>
                       <p class="text-x info mt-7">
