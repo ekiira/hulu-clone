@@ -5,17 +5,17 @@ module.exports = {
   theme: {
     fontSize: {
       ...defaultTheme.fontSize,
+      xx: "8px",
       x: "10px",
     },
     extend: {
       colors: {
-        ...defaultTheme.colors,
         white: "#ffffff",
         green: "#00ed82",
         dark: "#040505",
         black: "#0b0c0f",
         "blue-1": "#3370BB",
-        "gray-1": "#EBEDF2",
+        "gray-1": "#e8eaed",
         "gray-2": "#656B7B",
         "gray-3": "#DCDFE6",
         "gray-4": "#B8BECC",
@@ -25,6 +25,10 @@ module.exports = {
         "gray-8": "#272c34",
         "gray-9": "#424957",
         "green-1": "#1ce783",
+      },
+      spacing: {
+        "1/5": "10%",
+        "2/5": "20%",
       },
     },
 

@@ -12,11 +12,11 @@ const showAddons = ref(false);
 </script>
 
 <template>
-  <div class="pt-20 pb-10 dark">
-    <div class="lg:w-4/5 container mx-auto">
-      <div class="text-center pb-10">
+  <div class="pt-10 md:pt-20 pb-10 dark">
+    <div class="md:px-0 lg:w-4/5 md:container mx-auto">
+      <div class="text-center pb-8 md:pb-10">
         <h2 class="big_title">Select Your Plan</h2>
-        <div class="text-lg">
+        <div class="text-sm md:text-lg mt-3">
           No hidden fees, equipment rentals, or installation appointments.
           <br />
           <span class="customSemiBold">
@@ -29,7 +29,7 @@ const showAddons = ref(false);
         <!-- Header Mobile -->
         <div class="block lg:hidden">
           <div
-            class="border-t border-gray-6 flex justify-between items-center px-8 py-5"
+            class="border-t border-gray-6 flex justify-between items-center px-5 md:px-8 py-5"
           >
             <div>
               <p class="text-sm font-customMedium tracking-wide">
@@ -42,7 +42,7 @@ const showAddons = ref(false);
                 <img src="../assets/partners-dark.svg" width="166" />
               </div>
               <div>
-                <p class="font-customLight text-sm pt-2">
+                <p class="font-customLight text-sm pt-2 w-4/5 md:w-full">
                   Includes Hulu (plan of your choice), Disney+, and ESPN+.
                 </p>
               </div>
@@ -51,13 +51,17 @@ const showAddons = ref(false);
               <Switch
                 v-model="enabledSave"
                 :class="enabledSave ? 'bg-green-1' : 'bg-gray-9'"
-                class="relative pl-2 inline-flex h-8 w-16 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                class="relative pl-2 inline-flex h-6 md:h-8 w-12 md:w-16 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
               >
                 <span class="sr-only">Use setting</span>
                 <span
                   aria-hidden="true"
-                  :class="enabledSave ? 'translate-x-5' : 'translate-x-[-9px]'"
-                  class="pointer-events-none inline-block h-9 w-9 translate-y-[-4px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
+                  :class="
+                    enabledSave
+                      ? 'translate-x-3 md:translate-x-5'
+                      : 'translate-x-[-9px]'
+                  "
+                  class="pointer-events-none inline-block h-7 md:h-9 w-7 md:w-9 translate-y-[-4px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
                 />
               </Switch>
             </div>
@@ -66,7 +70,7 @@ const showAddons = ref(false);
             class="bg-black sticky top-0 z-10 border-y border-gray-6 grid grid-cols-3 gap-2 divide-x divide-gray-6"
           >
             <div class="px-2 py-8">
-              <div class="text-center px-2">
+              <div class="text-center md:px-2">
                 <div class="payment__green_banner centered">MOST POPULAR</div>
                 <div class="payment__offer">30 DAY FREE TRIAL</div>
                 <div class="payment__product">Hulu</div>
@@ -79,7 +83,7 @@ const showAddons = ref(false);
               </div>
             </div>
             <div class="px-2 py-8">
-              <div class="text-center px-2">
+              <div class="text-center md:px-2">
                 <div
                   class="payment__green_banner centered bg-transparent"
                 ></div>
@@ -94,7 +98,7 @@ const showAddons = ref(false);
               </div>
             </div>
             <div class="px-2 py-8">
-              <div class="text-center px-2">
+              <div class="text-center md:px-2">
                 <div
                   class="payment__green_banner centered bg-transparent"
                 ></div>
@@ -201,7 +205,7 @@ const showAddons = ref(false);
         </div>
 
         <!-- Content Mobile -->
-        <div>
+        <div class="block lg:hidden">
           <div
             v-for="(el, index) in data"
             :key="index"
@@ -319,11 +323,11 @@ const showAddons = ref(false);
         <div class="text-center lg:text-left pt-16" v-if="showAddons">
           <div class="payment__border pb-5">
             <span
-              class="mr-3 text-2xl lg:text-[32px] tracking-wide font-customSemiBold"
+              class="mr-3 text-lg md:text-2xl lg:text-[32px] tracking-wide font-customSemiBold"
               >Available Add-ons</span
             >
             <div class="lg:w-3/4 mt-1">
-              <p class="font-customLight text-sm pt-3">
+              <p class="font-customLight text-xs md:text-sm pt-1 md:pt-3">
                 Add-ons available at an additional cost.<br />Add them up after
                 you sign up for Hulu.
               </p>
@@ -422,7 +426,7 @@ const showAddons = ref(false);
           role="button"
           @click="showAddons = !showAddons"
         >
-          <div>
+          <div class="text-sm md:text-base">
             <span v-if="showAddons" class="flex">
               <span> Hide Add-ons </span>
               <span class="centered ml-2">
@@ -457,19 +461,23 @@ const showAddons = ref(false);
 
 <style>
 .payment__green_banner {
-  @apply bg-green-1   text-x lg:text-xs text-[#16181d] tracking-wider lg:tracking-wide w-4/6 lg:w-5/6 h-8 font-customMedium rounded-2xl mb-5 mx-auto;
+  @apply bg-green-1 text-xx md:text-x lg:text-xs text-[#16181d] tracking-wider lg:tracking-wide md:w-4/6 lg:w-5/6 h-8 font-customMedium rounded-2xl mb-5 mx-auto;
+}
+
+.button {
+  @apply bg-white text-xx md:text-sm uppercase text-dark h-9 lg:h-12 md:px-3 w-full rounded font-customSemiBold tracking-wide;
 }
 
 .payment__offer {
-  @apply mb-2 text-[#BEC0C2] font-customMedium tracking-wider text-x lg:text-sm;
+  @apply mb-2 text-[#BEC0C2] font-customMedium tracking-wider text-xx md:text-x lg:text-sm;
 }
 
 .payment__item {
-  @apply tracking-wide font-customLight;
+  @apply text-xs md:text-base tracking-wide font-customLight;
 }
 
 .payment__product {
-  @apply text-sm lg:text-xl font-customSemiBold mb-3 text-white;
+  @apply text-xs md:text-sm lg:text-xl font-customSemiBold mb-3 text-white;
 }
 
 .payment__border {

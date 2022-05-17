@@ -1,3 +1,4 @@
+import type { IFooterLinks } from "@/types/footerLinks";
 import type { IPaymentData } from "@/types/paymentPlan";
 
 export const paymentData: Array<IPaymentData> = [
@@ -155,4 +156,42 @@ export const addOns: Array<IPaymentData> = [
     thirdColumn: true,
     hasInfo: true,
   },
+];
+
+export const footerLinks: Array<IFooterLinks> = [
+  {
+    section: "Browse",
+    links: [
+      "Streaming Library",
+      "Live TV",
+      "Live News",
+      "Live Sports",
+      " ",
+      "TV shows",
+      "Movies",
+      "Originals",
+      "Networks",
+      "Kids",
+      "FX",
+      "",
+      "HBO Max \u2122",
+      "Cinemax",
+      "Showtime",
+      "STARZ",
+      "",
+      "Hulu, Disney+, and ESPN+",
+      "Hulu (No Ads), Disney+, and ESPN+",
+      "Student Discount",
+    ],
+  },
+  {
+    section: "Help",
+    links: [
+      "Account & Billing",
+      "Plans & Pricing",
+      "Supported devices",
+      "Accessibility",
+    ],
+  },
+  { section: "About Us", links: ["Shop Hulu", "Press", "Jobs", "Contact"] },
 ];

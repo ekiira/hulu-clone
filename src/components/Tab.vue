@@ -67,7 +67,7 @@ function changeTab(index: number) {
   <div class="tab-bg" :style="tabsBackground">
     <div class="tab-bg-overlay"></div>
 
-    <div class="h-full relative z-30 py-10 w-4/5 container mx-auto">
+    <div class="h-full relative z-30 pt-10 pb-16 w-4/5 container mx-auto">
       <div>
         <div class="mt-40">
           <div class="xl:w-3/5 text-center lg:text-left">
@@ -133,7 +133,7 @@ function changeTab(index: number) {
 
 <style>
 .tab-bg {
-  @apply xl:h-[900px] max-h-screen relative bg-no-repeat bg-cover;
+  @apply xl:h-[900px] max-h-screen relative bg-no-repeat bg-cover hidden md:block;
 }
 .tab-bg-overlay {
   @apply xl:h-[900px] max-h-screen  absolute w-full;

@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="hero__wrapper pt-32 pb-24">
+  <div class="hero__wrapper pt-20 md:pt-32 pb-16 md:pb-24">
     <div class="my-20">
-      <div class="md:w-4/6 lg:w-3/5 mx-auto text-center">
+      <div class="w-5/6 md:w-4/6 lg:w-3/5 mx-auto text-center">
         <div class="text-xs head tracking-wide">
           Bundle with any hulu plan and save
         </div>
@@ -15,7 +15,7 @@
           />
         </div>
         <div>
-          <p class="customSemibold text-white text-2xl mt-4 tracking-wide">
+          <p class="customSemibold text-white text-lg md:text-2xl mt-4 tracking-wide">
             Get endless entertainment, live sports, and the shows and movies you
             love.
           </p>
@@ -28,11 +28,11 @@
           </button>
         </div>
         <div>
-          <div class="text-white opacity-60 text-xs">
+          <div class="text-white opacity-60 text-x md:text-xs">
             <span class="customSemibold underline"> What's included?</span>
             <span> See <span class="underline"> Bundle Terms</span> </span>
           </div>
-          <div class="mt-4 text-white underline">Sign up for hulu only</div>
+          <div class="mt-4 text-white underline text-sm md:text-base">Sign up for hulu only</div>
         </div>
       </div>
     </div>

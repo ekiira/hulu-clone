@@ -1,17 +1,65 @@
 <script setup lang="ts">
+import { Disclosure, DisclosurePanel, DisclosureButton } from "@headlessui/vue";
+
 import Instagram from "./icons/Instagram.vue";
 import Twitter from "./icons/Twitter.vue";
 import Youtube from "./icons/Youtube.vue";
 import Facebook from "./icons/Facebook.vue";
+import { footerLinks } from "../utils/constant";
 </script>
 
 <template>
   <div class="bg-gray-1 pt-8 lg:pt-14">
     <div class="md:w-5/6 lg:w-4/5 container mx-auto">
-      <div>
-        <div
-          class="grid grid-cols-6 gap-6 border-b-2 border-gray-3 py-8 lg:py-10"
-        >
+      <!-- Mobile -->
+      <div className="block md:hidden w-full px-4 pt-16">
+        <div className="mx-auto w-full">
+          <div v-for="(el, index) in footerLinks" :key="index">
+            <Disclosure
+              as="div"
+              v-slot="{ open }"
+              class="border-b border-[#d9dce2] py-4"
+            >
+              <DisclosureButton
+                class="flex w-full justify-between p-2 text-left text-sm font-medium focus:outline-none"
+              >
+                <span class="footer__headlinks">{{ el.section }}</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="#0b0c0f"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-testid="ChevronDownIcon"
+                  focusable="false"
+                  aria-hidden="true"
+                  class="h-5 w-5"
+                  :class="open ? 'rotate-180 transform' : ''"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.707 16.707a1 1 0 01-1.414 0l-8-8a1 1 0 011.414-1.414L12 14.586l7.293-7.293a1 1 0 111.414 1.414l-8 8z"
+                  />
+                </svg>
+              </DisclosureButton>
+              <DisclosurePanel class="p-2 text-sm text-gray-500">
+                <div
+                  class="pb-2"
+                  v-for="(link, lIndex) in el.links"
+                  :key="lIndex"
+                >
+                  <div>
+                    <a href="#" class="footer__links"> {{ link }}</a>
+                  </div>
+                </div>
+              </DisclosurePanel>
+            </Disclosure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop -->
+      <div class="hidden md:block">
+        <div class="grid grid-cols-6 gap-6 py-8 lg:py-10">
           <div class="md:col-span-6 lg:col-span-4 leading-3">
             <h3 class="footer__headlinks">Browse</h3>
 
@@ -117,8 +165,9 @@ import Facebook from "./icons/Facebook.vue";
             </div>
           </div>
         </div>
-
-        <div class="flex items-center py-12">
+      </div>
+      <div class="border-t-2 border-gray-3 px-5 md:px-0">
+        <div class="flex items-center py-8 md:py-12">
           <div class="text-gray-2 mr-8">
             <Facebook />
           </div>
@@ -134,34 +183,45 @@ import Facebook from "./icons/Facebook.vue";
         </div>
 
         <div>
-          <div class="flex w-full flex-wrap justify-between">
-            <div>
+          <div class="md:flex w-full flex-wrap justify-between">
+            <div class="hidden md:flex items-center">
               <span class="footer__links text-xs">© 2022 Hulu, LLC</span>
             </div>
-            <div class="flex mr-3 items-center">
+            <div class="flex md:hidden">
+              <div class="flex mr-5 items-center">
+                <img src="../assets/ad-icon.png" alt="ad-icon" class="mr-2" />
+                <span class="footer__links text-xs whitespace-nowrap"
+                  >About Ads</span
+                >
+              </div>
+              <div>
+                <a href="#" class="footer__links text-xs">Terms of Use</a>
+              </div>
+            </div>
+            <div class="hidden md:flex mr-3 items-center">
               <img src="../assets/ad-icon.png" alt="ad-icon" class="mr-2" />
               <span class="footer__links text-xs whitespace-nowrap"
                 >About Ads</span
               >
             </div>
-            <div>
+            <div class="hidden md:flex items-center">
               <a href="#" class="footer__links text-xs">Terms of Use</a>
             </div>
-            <div>
+            <div class="pt-2 md:pt-0">
               <a href="#" class="footer__links text-xs">Privacy Policy</a>
             </div>
-            <div>
+            <div class="pt-2 md:pt-0">
               <a href="#" class="footer__links text-xs"
                 >Do Not Sell My Personal Information</a
               >
             </div>
-            <div>
+            <div class="pt-2 lg:pt-0">
               <a href="#" class="footer__links text-xs"
                 >Your California Privacy Rights</a
               >
             </div>
           </div>
-          <div class="flex pt-3">
+          <div class="flex pt-2 md:pt-3">
             <div class="mr-5">
               <a href="#" class="footer__links text-xs"
                 >TV Parental Guidelines</a
@@ -171,10 +231,17 @@ import Facebook from "./icons/Facebook.vue";
               <a href="#" class="footer__links text-xs">sitemap</a>
             </div>
           </div>
+          <div class="pt-2 md:pt-3">
+            <div class="flex md:hidden">
+              <span class="footer__links text-xs">© 2022 Hulu, LLC</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="mt-10 text-center bg-black w-full text-white tracking-wide">
+    <div
+      class="mt-10 text-sm text-center bg-black w-full text-white tracking-wide"
+    >
       <p>
         This is just a website clone of
         <a
@@ -191,10 +258,10 @@ import Facebook from "./icons/Facebook.vue";
 
 <style>
 .footer__headlinks {
-  @apply text-[#262930] uppercase text-xs font-customMedium pb-2;
+  @apply text-gray-8 uppercase text-xs font-customMedium pb-2 tracking-wide;
 }
 
 .footer__links {
-  @apply text-gray-2 capitalize text-sm cursor-pointer hover:text-blue-1;
+  @apply text-[#586174] capitalize text-xs cursor-pointer tracking-wide hover:text-blue-1;
 }
 </style>
